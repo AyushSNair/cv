@@ -4,7 +4,7 @@
 % Based on: https://github.com/AyushSNair/AutoCV
 %------------------------
 
-\documentclass[letterpaper,11pt]{article}
+\documentclass[a4paper,11pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -14,31 +14,33 @@
 \usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
-\usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
-\usepackage{fontawesome5}
+\usepackage{fontawesome}
 \usepackage{multicol}
+\usepackage{graphicx}
 \setlength{\multicolsep}{-3.0pt}
 \setlength{\columnsep}{-1pt}
 \input{glyphtounicode}
 
-%----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
+\RequirePackage{tikz}
+\RequirePackage{xcolor}
+\usetikzlibrary{svg.path}
 
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
-
-\pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
+\definecolor{cvblue}{HTML}{0E5484}
+\definecolor{black}{HTML}{130810}
+\definecolor{darkcolor}{HTML}{0F4539}
+\definecolor{cvgreen}{HTML}{3BD80D}
+\definecolor{taggreen}{HTML}{00E278}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{name}{black}
+\colorlet{tagline}{darkcolor}
+\colorlet{heading}{darkcolor}
+\colorlet{headingrule}{cvblue}
+\colorlet{accent}{darkcolor}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
 
 % Adjust margins
 \addtolength{\oddsidemargin}{-0.6in}
@@ -48,224 +50,208 @@
 \addtolength{\textheight}{1.4in}
 
 \urlstyle{same}
-
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Sections formatting
+% Section formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large\bfseries
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
-% Ensure that generate pdf is machine readable/ATS parsable
+  \vspace{-3pt}\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-3pt}]
 \pdfgentounicode=1
 
 %-------------------------
 % Custom commands
-\newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
-}
-
-\newcommand{\classesList}[4]{
-    \item\small{
-        {#1 #2 #3 #4 \vspace{-2pt}}
-  }
-}
-
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
-    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & \textbf{\small #2} \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
+  \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{\large#1} & \textbf{\small #2} \\
+    \textit{\large#3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-7pt}
 }
-
 \newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
+  \item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textit{\small#1} & \textit{\small #2} \\
+  \end{tabular*}\vspace{-7pt}
 }
-
 \newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & \textbf{\small #2}\\
-    \end{tabular*}\vspace{-7pt}
+  \item
+  \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+    \small#1 & \textbf{\small #2} \\
+  \end{tabular*}\vspace{-7pt}
 }
-
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-
 \renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand\sbullet[1][.5]{\mathbin{\vcenter{\hbox{\scalebox{#1}{$\bullet$}}}}}
 
 %-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+% Resume starts here
 \begin{document}
 
 %----------HEADING----------
 \begin{center}
-    {\Huge \scshape Ayush Nair} \\ \vspace{1pt}
-    Full Stack Developer \\ \vspace{1pt}
-    \small \raisebox{-0.1\height}\faPhone\ +91 9321061394 ~ \href{mailto:nairayush45@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  nairayush45@gmail.com} ~ 
-    \href{https://www.linkedin.com/in/ayush-nair-b71699284/}{\raisebox{-0.2\height}\faLinkedin\ linkedin.com/in/ayush-nair-b71699284}  ~
-    \href{https://github.com/AyushSNair}{\raisebox{-0.2\height}\faGithub\ github.com/AyushSNair}
-    \vspace{-8pt}
+  {\Huge \textbf{Ayush Sukhadan Nair}} \\ \vspace{1pt}
+  Vangani, Maharashtra \\ \vspace{1pt}
+  \small 
+  \href{tel:+919321061394}{\faPhone\ \underline{+91-9321061394}} ~ 
+  \href{mailto:nairayush45@gmail.com}{\faEnvelope\ \underline{nairayush45@gmail.com}} ~ 
+  \href{https://www.linkedin.com/in/ayush-nair-b71699284/}{\faLinkedin\ \underline{linkedin.com/in/ayush-nair-b71699284}} ~ 
+  \href{https://github.com/AyushSNair}{\faGithub\ \underline{github.com/AyushSNair}} \\
+  \vspace{-8pt}
 \end{center}
 
 %-----------EDUCATION-----------
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Fr. C. Rodrigues Institute of Technology}{Vashi, Navi Mumbai}
-      {Bachelor of Engineering in Information Technology}{2022 -- 2026}
-      \resumeItemListStart
-        \resumeItem{CGPA: 9.55/10.0}
-      \resumeItemListEnd
-  \resumeSubHeadingListEnd
+\section{EDUCATION}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Bachelor of Engineering - Information Technology}{2022 -- 2026}
+    {Fr. C. Rodrigues Institute of Technology - \textbf{CGPA} - \textbf{9.55/10.0}}{Vashi, Navi Mumbai}
+\resumeSubHeadingListEnd
 
-%-----------EXPERIENCE-----------
-\section{Experience}
-  \resumeSubHeadingListStart
+%-----------WORK EXPERIENCE-----------
+\section{WORK EXPERIENCE}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Project Intern}{June 2025 -- Present}
+    {\underline{IISER Mohali x TIFR}}{Mohali, Punjab}
+    \resumeItemListStart
+      \resumeItem{\normalsize{Currently working on \textbf{development and testing of silicon sensor modules for high-energy physics experiments}.}}
+      \resumeItem{\normalsize{Involved in \textbf{automating validation of sensor wire bonds using high quality scanner images and ML models}.}}
+    \resumeItemListEnd
 
-    \resumeSubheading
-      {IISER Mohali x TIFR}{Mohali, Punjab}
-      {Project Intern}{Jun 2025 -- Present}
-      \resumeItemListStart
-        \resumeItem{Currently working on development and testing of silicon sensor modules for high-energy physics experiments}
-        \resumeItem{Involved in automating validation of sensor wire bonds using high quality scanner images and ML models}
-      \resumeItemListEnd
+  \resumeSubheading
+    {Backend + Analytics}{June 2025 -- Present}
+    {\underline{Sports Mentoring Infusion - NGO}}{Remote}
+    \resumeItemListStart
+      \resumeItem{\normalsize{Developed and launched \textbf{production-grade Sports Mentoring Infusion (SMI) application for non-profit organization}.}}
+      \resumeItem{\normalsize{Successfully \textbf{scaled application to serve over 1,000 active users}.}}
+      \resumeItem{\normalsize{Streamlined NGO's communication and volunteer management processes with \textbf{significant real-world impact}.}}
+    \resumeItemListEnd
 
-    \resumeSubheading
-      {Sports Mentoring Infusion - NGO}{Remote}
-      {Backend + Analytics Developer}{Jun 2025 -- Present}
-      \resumeItemListStart
-        \resumeItem{Developed and launched production-grade Sports Mentoring Infusion (SMI) application for non-profit organization}
-        \resumeItem{Successfully scaled application to serve over 1,000 active users}
-        \resumeItem{Streamlined NGO's communication and volunteer management processes with significant real-world impact}
-      \resumeItemListEnd
+  \resumeSubheading
+    {Project Intern}{July 2024 -- June 2025}
+    {\underline{IISER Mohali}}{Mohali, Punjab}
+    \resumeItemListStart
+      \resumeItem{\normalsize{Developed \textbf{Fall Detection system using YOLOv8-OBB + MediaPipe Pose} for real-time human fall detection.}}
+      \resumeItem{\normalsize{Combined \textbf{YOLOv8 Oriented Bounding Boxes with MediaPipe Pose Estimation} to verify fall predictions.}}
+      \resumeItem{\normalsize{Created healthcare solution for \textbf{elderly, disabled individuals, and patients at risk of falling}.}}
+    \resumeItemListEnd
 
-    \resumeSubheading
-      {IISER Mohali}{Mohali, Punjab}
-      {Project Intern}{Jul 2024 -- Jun 2025}
-      \resumeItemListStart
-        \resumeItem{Developed Fall Detection system using YOLOv8-OBB + MediaPipe Pose for real-time human fall detection}
-        \resumeItem{Combined YOLOv8 Oriented Bounding Boxes with MediaPipe Pose Estimation to verify fall predictions}
-        \resumeItem{Created healthcare solution for elderly, disabled individuals, and patients at risk of falling}
-      \resumeItemListEnd
+  \resumeSubheading
+    {Developer Intern}{July 2024 -- June 2025}
+    {\underline{Fr. Conceicao Rodrigues Institute of Technology}}{Vashi, Navi Mumbai}
+    \resumeItemListStart
+      \resumeItem{\normalsize{Developed \textbf{comprehensive college portal used by entire college community} including students, faculty, and alumni.}}
+      \resumeItem{\normalsize{Implemented \textbf{secure admin registration, event addition functionalities, and event display features}.}}
+    \resumeItemListEnd
 
-    \resumeSubheading
-      {Fr. Conceicao Rodrigues Institute of Technology}{Vashi, Navi Mumbai}
-      {Developer Intern}{Jul 2024 -- Jun 2025}
-      \resumeItemListStart
-        \resumeItem{Developed comprehensive college portal used by entire college community including students, faculty, and alumni}
-        \resumeItem{Implemented secure admin registration, event addition functionalities, and event display features}
-        \resumeItem{Enhanced problem-solving abilities and solidified understanding of web development principles}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {RVTechLearn}{Vashi, Navi Mumbai}
-      {Developer Intern}{Jun 2024 -- Nov 2024}
-      \resumeItemListStart
-        \resumeItem{Developed semantic segmentation models achieving >95\% accuracy}
-        \resumeItem{Trained stock prediction model using time series analysis with >90\% accuracy}
-        \resumeItem{Designed and trained predictive models using supervised learning techniques}
-        \resumeItem{Involved in data preprocessing, feature engineering, and ML pipeline development}
-        \resumeItem{Developed AI-powered applications and deployed ML models to production}
-      \resumeItemListEnd
-
-  \resumeSubHeadingListEnd
-\vspace{-16pt}
+  \resumeSubheading
+    {Developer Intern}{June 2024 -- November 2024}
+    {\underline{RVTechLearn}}{Vashi, Navi Mumbai}
+    \resumeItemListStart
+      \resumeItem{\normalsize{Developed \textbf{semantic segmentation models achieving >95\% accuracy}.}}
+      \resumeItem{\normalsize{Trained \textbf{stock prediction model using time series analysis with >90\% accuracy}.}}
+      \resumeItem{\normalsize{Involved in \textbf{data preprocessing, feature engineering, and ML pipeline development}.}}
+      \resumeItem{\normalsize{Developed \textbf{AI-powered applications and deployed ML models to production}.}}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{-12pt}
 
 %-----------PROJECTS-----------
-\section{Projects}
-    \vspace{-5pt}
-    \resumeSubHeadingListStart
-      \resumeProjectHeading
-          {\textbf{Delta Investments} $|$ \emph{MERN Stack, AI Integration, Real-time APIs}}{2024}
-          \resumeItemListStart
-            \resumeItem{Built MERN stack-based platform for smart investment management with comprehensive features}
-            \resumeItem{Integrated stock \& portfolio tracking, bonds, insurance, and AI-powered auto trading capabilities}
-            \resumeItem{Implemented real-time stock data, learning modules, and Gemini AI for predictive market analysis}
-          \resumeItemListEnd
-          \vspace{-13pt}
-      \resumeProjectHeading
-          {\textbf{VaniConnect: Sign Language to Voice Transcriber} $|$ \emph{Python, Computer Vision, ML}}{2024}
-          \resumeItemListStart
-            \resumeItem{Developed innovative solution to bridge communication gaps between sign language users and others}
-            \resumeItem{Implemented real-time sign language gesture translation to spoken language using computer vision}
-            \resumeItem{Won Summer Project Competition for this sign language transcription solution}
-          \resumeItemListEnd 
-          \vspace{-13pt}
-      \resumeProjectHeading
-          {\textbf{Visual-Pulse} $|$ \emph{Python, Business Analytics, Data Visualization}}{2024}
-          \resumeItemListStart
-            \resumeItem{Created business graph application centered around business object hierarchy}
-            \resumeItem{Provided additional analytical capabilities and insights for business decision-making}
-          \resumeItemListEnd
-    \resumeSubHeadingListEnd
+\section{PROJECTS}
+\vspace{-5pt}
+\resumeSubHeadingListStart
+
+  \resumeProjectHeading
+    {\href{https://github.com/AyushSNair}{\textbf{\large{Delta Investments}}} \href{https://github.com/AyushSNair}{\faExternalLink} $|$ \large MERN Stack, AI Integration}{2024}
+    \resumeItemListStart
+      \resumeItem{\normalsize{Built \textbf{MERN stack-based platform for smart investment management} with comprehensive features.}}
+      \resumeItem{\normalsize{Integrated \textbf{real-time stock data, learning modules, and Gemini AI for predictive market analysis}.}}
+      \resumeItem{\normalsize{Features include \textbf{stock \& portfolio tracking, bonds, insurance, and AI-powered auto trading}.}}
+    \resumeItemListEnd
+    \vspace{-6pt}
+
+  \resumeProjectHeading
+    {\href{https://github.com/AyushSNair}{\textbf{\large{VaniConnect: Sign Language to Voice Transcriber}}} \href{https://github.com/AyushSNair}{\faExternalLink} $|$ \large Python, Computer Vision, ML}{2024}
+    \resumeItemListStart
+      \resumeItem{\normalsize{Developed \textbf{innovative solution to bridge communication gaps} between sign language users and others.}}
+      \resumeItem{\normalsize{Implemented \textbf{real-time sign language gesture translation to spoken language} using computer vision.}}
+      \resumeItem{\normalsize{\textbf{Won Summer Project Competition} for this sign language transcription solution.}}
+    \resumeItemListEnd
+    \vspace{-6pt}
+
+  \resumeProjectHeading
+    {\href{https://github.com/AyushSNair}{\textbf{\large{Visual-Pulse}}} \href{https://github.com/AyushSNair}{\faExternalLink} $|$ \large Python, Business Analytics}{2024}
+    \resumeItemListStart
+      \resumeItem{\normalsize{Created \textbf{business graph application centered around business object hierarchy}.}}
+      \resumeItem{\normalsize{Provided \textbf{additional analytical capabilities and insights} for business decision-making.}}
+    \resumeItemListEnd
+    \vspace{-6pt}
+
+\resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{TECHNICAL SKILLS}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    \textbf{\normalsize{Languages:}} Python, Java, PHP, JavaScript, HTML/CSS, SQL \\
+    \textbf{\normalsize{Frontend:}} React, HTML/CSS, JavaScript \\
+    \textbf{\normalsize{Backend:}} Node.js, Express, MongoDB, PHP \\
+    \textbf{\normalsize{Machine Learning:}} TensorFlow, PyTorch, Scikit-learn, Computer Vision, NLP, Time Series Analysis \\
+    \textbf{\normalsize{Databases:}} MongoDB, MySQL, PostgreSQL \\
+    \textbf{\normalsize{Tools:}} Git, Data Structures, Data Science
+  }}
+\end{itemize}
 \vspace{-15pt}
 
-%-----------PROGRAMMING SKILLS-----------
-\section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Languages}{: Python, Java, PHP, JavaScript, HTML/CSS, SQL} \\
-     \textbf{Frameworks \& Technologies}{: MERN Stack (MongoDB, Express.js, React, Node.js), Flask} \\
-     \textbf{Machine Learning}{: TensorFlow, PyTorch, Scikit-learn, Computer Vision, NLP, Time Series Analysis} \\
-     \textbf{Databases}{: MongoDB, MySQL, PostgreSQL} \\
-     \textbf{Specializations}{: Data Science, Machine Learning, Full Stack Development, Data Structures \& Algorithms}
-    }}
- \end{itemize}
- \vspace{-16pt}
-
 %-----------ACHIEVEMENTS-----------
-\section{Achievements}
-    \resumeSubHeadingListStart
-      \resumeSubheading
-        {HackQuinox 2024 - Computer Society of India FCRIT}{Mumbai, India}
-        {Top 5 Finalist}{2024}
-        \resumeItemListStart
-          \resumeItem{Demonstrated advanced full-stack development, problem-solving and teamwork skills}
-        \resumeItemListEnd
-      \resumeSubheading
-        {Summer Project Competition}{FCRIT}
-        {Winner - Sign Language to Voice Transcriber}{2024}
-        \resumeItemListStart
-          \resumeItem{Recognized for innovative communication solution using computer vision and machine learning}
-        \resumeItemListEnd
-      \resumeSubheading
-        {Smart India Hackathon}{Government of India}
-        {Cleared Internal Round}{2024}
-        \resumeItemListStart
-          \resumeItem{Selected for national-level hackathon after rigorous internal evaluation process}
-        \resumeItemListEnd
-    \resumeSubHeadingListEnd
+\section{ACHIEVEMENTS}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Top 5 Finalist}{2024}
+    {\underline{HackQuinox 2024 - Computer Society of India FCRIT}}{Mumbai, India}
+    \resumeItemListStart
+      \resumeItem{\normalsize{Demonstrated \textbf{advanced full-stack development, problem-solving and teamwork skills}.}}
+    \resumeItemListEnd
 
-%-----------EXTRACURRICULAR ACTIVITIES-----------
-\section{Extracurricular Activities}
-    \resumeSubHeadingListStart
-      \resumeSubheading
-        {Computer Society of India - IT Department FCRIT}{Mumbai, India}
-        {Treasurer (Core Member)}{2023 -- Present}
-        \resumeItemListStart
-          \resumeItem{Managing financial operations and budgeting for technical events and workshops}
-        \resumeItemListEnd
-      \resumeSubheading
-        {ETAMAX 2024}{FCRIT}
-        {Organizing Committee Member}{2024}
-        \resumeItemListStart
-          \resumeItem{Enhanced creative and management skills through event organization and coordination}
-        \resumeItemListEnd
-    \resumeSubHeadingListEnd
+  \resumeSubheading
+    {Winner - Sign Language to Voice Transcriber}{2024}
+    {\underline{Summer Project Competition}}{FCRIT}
+    \resumeItemListStart
+      \resumeItem{\normalsize{Recognized for \textbf{innovative communication solution using computer vision and machine learning}.}}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Cleared Internal Round}{2024}
+    {\underline{Smart India Hackathon}}{Government of India}
+    \resumeItemListStart
+      \resumeItem{\normalsize{Selected for \textbf{national-level hackathon after rigorous internal evaluation process}.}}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------LEADERSHIP & ACTIVITIES-----------
+\section{LEADERSHIP \& ACTIVITIES}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Treasurer (Core Member)}{2023 -- Present}
+    {\underline{Computer Society of India - IT Department FCRIT}}{Mumbai, India}
+    \resumeItemListStart
+      \resumeItem{\normalsize{Managing \textbf{financial operations and budgeting for technical events and workshops}.}}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Organizing Committee Member}{2024}
+    {\underline{ETAMAX 2024}}{FCRIT}
+    \resumeItemListStart
+      \resumeItem{\normalsize{Enhanced \textbf{creative and management skills through event organization and coordination}.}}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
 
 \end{document}
