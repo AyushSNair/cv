@@ -2,7 +2,7 @@
 % Author : Ayush Sukhadan Nair
 %------------------------
 
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper,10pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -21,29 +21,18 @@
 \setlength{\columnsep}{-1pt}
 \input{glyphtounicode}
 
-%----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
-
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
-
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins
+% Adjust margins for tighter layout
 \addtolength{\oddsidemargin}{-0.6in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1.19in}
-\addtolength{\topmargin}{-.7in}
-\addtolength{\textheight}{1.4in}
+\addtolength{\topmargin}{-.8in}
+\addtolength{\textheight}{1.6in}
 
 \urlstyle{same}
 
@@ -51,59 +40,44 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Sections formatting
+% Sections formatting - more compact
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large\bfseries
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+  \vspace{-6pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
 %-------------------------
-% Custom commands
+% Custom commands - more compact
 \newcommand{\resumeItem}[1]{
   \item\small{
-    {#1 \vspace{-2pt}}
-  }
-}
-
-\newcommand{\classesList}[4]{
-    \item\small{
-        {#1 #2 #3 #4 \vspace{-2pt}}
+    {#1 \vspace{-3pt}}
   }
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
+  \vspace{-3pt}\item
     \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & \textbf{\small #2} \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-8pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
     \item
     \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & \textbf{\small #2}\\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-8pt}
 }
-
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
 \renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.1in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-6pt}}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -116,9 +90,9 @@
     \small \raisebox{-0.1\height}\faPhone\ (+91) 9321061394 ~ \href{mailto:nairayush45@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  nairayush45@gmail.com} ~ 
     \href{https://www.linkedin.com/in/ayush-nair-b71699284/}{\raisebox{-0.2\height}\faLinkedin\ linkedin.com/in/ayush-nair}  ~
     \href{https://github.com/AyushSNair}{\raisebox{-0.2\height}\faGithub\ github.com/ayushnair}
-    \vspace{-8pt}
+    \vspace{-10pt}
 \end{center}
-  
+
 %-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
@@ -133,7 +107,6 @@
 %-----------EXPERIENCE-----------
 \section{Work Experience}
   \resumeSubHeadingListStart
-
     \resumeSubheading
       {IISER Mohali x TIFR}{Mohali, Punjab}
       {Project Intern}{June 2025 -- Present}
@@ -162,8 +135,8 @@
       {Fr. Conceicao Rodrigues Institute of Technology}{Vashi, Navi Mumbai}
       {Developer Intern}{July 2024 -- June 2025}
       \resumeItemListStart
-        \resumeItem{Optimized college portal serving \textbf{1,000+ users} (students, principal, faculty, alumni), improving page load times by \textbf{40\%}.}
-        \resumeItem{Built \textbf{information management system} processing \textbf{for managing the college data and information} .}
+        \resumeItem{Optimized college portal serving \textbf{1,000+ users}, improving page load times by \textbf{40\%}.}
+        \resumeItem{Built \textbf{information management system} for managing college data and information.}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -173,22 +146,17 @@
         \resumeItem{Trained semantic segmentation models achieving \textbf{95\% accuracy} on \textbf{1,000+ image dataset}.}
         \resumeItem{Deployed stock prediction model with \textbf{90\% accuracy} using time series analysis of \textbf{5-year market data}.}
       \resumeItemListEnd
-
   \resumeSubHeadingListEnd
-\vspace{-16pt}
 
 %-----------PROJECTS-----------
 \section{Projects}
-    \vspace{-5pt}
     \resumeSubHeadingListStart
-
       \resumeProjectHeading
           {\textbf{Delta Investments} $|$ \emph{MERN Stack, AI Integration}}{2024}
           \resumeItemListStart
             \resumeItem{Architected investment platform with \textbf{real-time stock data} and \textbf{Gemini AI} integration.}
             \resumeItem{Implemented \textbf{auto trading feature} with AI-powered market analysis and risk management.}
           \resumeItemListEnd
-          \vspace{-13pt}
 
       \resumeProjectHeading
           {\textbf{VaniConnect: Sign Language Transcriber} $|$ \emph{Python, Computer Vision}}{2024}
@@ -196,7 +164,6 @@
             \resumeItem{Constructed real-time gesture translation system with \textbf{85\% accuracy} across \textbf{200+ sign patterns} for both \textbf{Indian and American sign languages}.}
             \resumeItem{\textbf{Won 1st place} in Summer Project Competition among \textbf{60+ participants}.}
           \resumeItemListEnd 
-          \vspace{-13pt}
 
       \resumeProjectHeading
           {\textbf{Open Source Contribution Tracker} $|$ \emph{React, Node.js, MongoDB}}{2024}
@@ -204,43 +171,30 @@
             \resumeItem{Launched analytics platform providing analysis and tracking for \textbf{20 GitHub repositories}.}
             \resumeItem{Automated CI/CD pipelines using \textbf{GitHub Actions}, reducing deployment time by \textbf{80\%}.}
           \resumeItemListEnd
-          \vspace{-13pt}
-
     \resumeSubHeadingListEnd
-  \vspace{8pt}
 
-%-----------ACHIEVEMENTS-----------
-\section{Achievements}
+%-----------ACHIEVEMENTS & LEADERSHIP-----------
+\section{Achievements \& Leadership}
     \resumeSubHeadingListStart
       \resumeSubheading
         {HackQuinox 2024 - CSI FCRIT}{Mumbai, India}
         {Top 5 Finalist}{2024}
-        \resumeItemListStart
-          \resumeItem{Placed \textbf{top 5} among \textbf{100+ teams} in 48-hour hackathon competition.}
-        \resumeItemListEnd
-
+        
       \resumeSubheading
         {Smart India Hackathon}{Government of India}
         {Internal Round Qualifier}{2024}
+
+      \resumeSubheading
+        {Computer Society of India - IT Department}{FCRIT}
+        {Treasurer}{2023 -- Present}
         \resumeItemListStart
-          \resumeItem{Selected from \textbf{500+ college participants} for national-level competition.}
+          \resumeItem{Handled finance for CSI-IT events, managing budgets up to \textbf{INR 30,000} with sponsorship incentives.}
         \resumeItemListEnd
     \resumeSubHeadingListEnd
 
-%-----------LEADERSHIP-----------
-\section{Leadership}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Computer Society of India - IT Department}{FCRIT}
-      {Treasurer}{2023 -- Present}
-      \resumeItemListStart
-        \resumeItem{Handled finance for events conducted by Computer Society of India - IT, managing budgets up to \textbf{INR 30,000} with additional sponsorship incentives.}
-      \resumeItemListEnd
-  \resumeSubHeadingListEnd
-
 %-----------PROGRAMMING SKILLS-----------
 \section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
+ \begin{itemize}[leftmargin=0.1in, label={}]
     \small{\item{
      \textbf{Languages}{: Python, Java, JavaScript, SQL, PHP} \\
      \textbf{Frontend}{: React, HTML/CSS, JavaScript} \\
@@ -249,6 +203,5 @@
      \textbf{Tools}{: Git, Docker, GitHub Actions, AWS}
     }}
  \end{itemize}
- \vspace{-16pt}
 
 \end{document}
