@@ -17,6 +17,7 @@
 \usepackage{tabularx}
 \usepackage{fontawesome5}
 \usepackage{multicol}
+\usepackage{graphicx}
 \setlength{\multicolsep}{-3.0pt}
 \setlength{\columnsep}{-1pt}
 \input{glyphtounicode}
@@ -86,10 +87,18 @@
 
 %----------HEADING----------
 \begin{center}
-    {\Huge \scshape Ayush Sukhadan Nair} \\ \vspace{1pt}
-    \small \raisebox{-0.1\height}\faPhone\ (+91) 9321061394 ~ \href{mailto:nairayush45@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  nairayush45@gmail.com} ~ 
-    \href{https://www.linkedin.com/in/ayush-nair-b71699284/}{\raisebox{-0.2\height}\faLinkedin\ linkedin.com/in/ayush-nair}  ~
-    \href{https://github.com/AyushSNair}{\raisebox{-0.2\height}\faGithub\ github.com/ayushnair}
+    \begin{minipage}[t]{0.75\textwidth}
+        {\Huge \scshape Ayush Sukhadan Nair} \\ \vspace{1pt}
+        \small \raisebox{-0.1\height}\faPhone\ (+91) 9321061394 ~ \href{mailto:nairayush45@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  nairayush45@gmail.com} ~ 
+        \href{https://www.linkedin.com/in/ayush-nair-b71699284/}{\raisebox{-0.2\height}\faLinkedin\ linkedin.com/in/ayush-nair}  ~
+        \href{https://github.com/AyushSNair}{\raisebox{-0.2\height}\faGithub\ github.com/ayushnair}
+    \end{minipage}%
+    \begin{minipage}[t]{0.25\textwidth}
+        \raggedleft
+        \vspace{-20pt}
+        \includegraphics[width=3cm,height=3.5cm,keepaspectratio]{photo.jpg}
+        % Replace 'photo.jpg' with your actual photo filename
+    \end{minipage}
     \vspace{-10pt}
 \end{center}
 
@@ -140,7 +149,6 @@
         \resumeItem{Built \textbf{information management system} for managing college data and information.}
       \resumeItemListEnd
 
-
   \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------
@@ -172,7 +180,7 @@
           {\textbf{Open Source Contribution Tracker} $|$ \emph{React, Node.js, MongoDB}}{2024}
           \resumeItemListStart
               \resumeItem{Developed analytics platform to provide analysis and tracking for \textbf{20+ GitHub repositories}.}
-              \resumeItem{Enabled users to view details of their open-source contributions and generate shareable links to showcase them on platforms like                       LinkedIn.}
+              \resumeItem{Enabled users to view details of their open-source contributions and generate shareable links to showcase them on platforms like LinkedIn.}
         \resumeItemListEnd
 
     \resumeSubHeadingListEnd
