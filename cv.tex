@@ -23,11 +23,12 @@
 \input{glyphtounicode}
 
 \pagestyle{fancy}
-\fancyhf{}
+\fancyhf{} % clear all header and footer fields
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
+% Adjust margins for tighter layout
 \addtolength{\oddsidemargin}{-0.6in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1.19in}
@@ -35,16 +36,21 @@
 \addtolength{\textheight}{1.6in}
 
 \urlstyle{same}
+
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
 
+% Sections formatting - more compact
 \titleformat{\section}{
   \vspace{-6pt}\scshape\raggedright\large\bfseries
 }{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
 
+% Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
+%-------------------------
+% Custom commands - more compact
 \newcommand{\resumeItem}[1]{
   \item\small{
     {#1 \vspace{-3pt}}
@@ -74,122 +80,141 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.1in]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-6pt}}
 
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{document}
 
+%----------HEADING----------
 \begin{center}
     {\Huge \scshape Ayush Sukhadan Nair} \\ \vspace{1pt}
-    \small \raisebox{-0.1\height}\faPhone\ (+91) 9321061394 ~ 
-    \href{mailto:nairayush45@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  nairayush45@gmail.com} ~ 
+    \small \raisebox{-0.1\height}\faPhone\ (+91) 9321061394 ~ \href{mailto:nairayush45@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  nairayush45@gmail.com} ~ 
     \href{https://www.linkedin.com/in/ayush-nair-b71699284/}{\raisebox{-0.2\height}\faLinkedin\ linkedin.com/in/ayush-nair}  ~
     \href{https://github.com/AyushSNair}{\raisebox{-0.2\height}\faGithub\ github.com/ayushnair}
     \vspace{-8pt}
 \end{center}
 
+%-----------EDUCATION-----------
 \section{Education}
-\resumeSubHeadingListStart
-\resumeSubheading
-{Fr. C. Rodrigues Institute of Technology}{Vashi, Navi Mumbai}
-{Bachelor of Engineering in Information Technology}{2022 -- 2026}
-\resumeItemListStart
-\resumeItem{CGPA: 9.55/10.0}
-\resumeItemListEnd
-\resumeSubHeadingListEnd
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Fr. C. Rodrigues Institute of Technology}{Vashi, Navi Mumbai}
+      {Bachelor of Engineering in Information Technology}{2022 -- 2026}
+      \resumeItemListStart
+        \resumeItem{CGPA: 9.55/10.0}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
 
+%-----------EXPERIENCE-----------
 \section{Work Experience}
-\resumeSubHeadingListStart
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {IISER Mohali x TIFR}{Mohali, Punjab}
+      {Project Intern}{June 2025 -- Present}
+      \resumeItemListStart
+        \resumeItem{Architecting \textbf{silicon sensor modules} for \textbf{high-energy physics experiments} with \textbf{3 team members}.}
+        \resumeItem{Automating validation of \textbf{500 sensor wire bonds} using \textbf{ML models} and high-resolution scanner images.}
+      \resumeItemListEnd
 
-\resumeSubheading
-{IISER Mohali x TIFR}{Mohali, Punjab}
-{Project Intern}{June 2025 -- Present}
-\resumeItemListStart
-\resumeItem{Architecting \textbf{silicon sensor modules} for \textbf{high-energy physics experiments}.}
-\resumeItem{Automating validation of \textbf{500 sensor wire bonds} using \textbf{ML models}.}
-\resumeItemListEnd
+    \resumeSubheading
+      {Sports Mentoring Infusion - NGO}{Remote}
+      {Backend + Analytics Developer}{June 2025 -- July 2025}
+      \resumeItemListStart
+        \resumeItem{Developing production-grade application with \textbf{base authentication system} and \textbf{all core modules} implemented.}
+        \resumeItem{Building platform architecture to serve \textbf{50+ users} across \textbf{4 user roles} (admins, students, coaches, volunteers).}
+        \resumeItem{Implementing communication workflows to reduce manual coordination time by \textbf{70\%} for \textbf{10+ coaches}.}
+      \resumeItemListEnd
 
-\resumeSubheading
-{Sports Mentoring Infusion - NGO}{Remote}
-{Backend + Analytics Developer}{June 2025 -- July 2025}
-\resumeItemListStart
-\resumeItem{Developed production-grade application with authentication and core modules.}
-\resumeItem{Built platform architecture serving \textbf{50+ users} across \textbf{4 roles}.}
-\resumeItemListEnd
+    \resumeSubheading
+      {IISER Mohali}{Mohali, Punjab}
+      {Project Intern}{July 2024 -- June 2025}
+      \resumeItemListStart
+        \resumeItem{Engineered fall detection system using \textbf{YOLOv8-OBB + MediaPipe}, reducing false positives by \textbf{60\%}.}
+        \resumeItem{Created healthcare solution for \textbf{live monitoring and feedback} for immediate response.}
+      \resumeItemListEnd
 
-\resumeSubheading
-{IISER Mohali}{Mohali, Punjab}
-{Project Intern}{July 2024 -- June 2025}
-\resumeItemListStart
-\resumeItem{Engineered fall detection system using \textbf{YOLOv8-OBB + MediaPipe}.}
-\resumeItem{Created healthcare solution for live monitoring.}
-\resumeItemListEnd
+    \resumeSubheading
+      {Fr. Conceicao Rodrigues Institute of Technology}{Vashi, Navi Mumbai}
+      {Developer Intern}{July 2023 -- June 2024}
+      \resumeItemListStart
+        \resumeItem{Optimized college portal serving \textbf{200+ users} with enhanced performance and functionality.}
+        \resumeItem{Built \textbf{information management system} for managing college data and information.}
+      \resumeItemListEnd
 
-\resumeSubheading
-{Fr. Conceicao Rodrigues Institute of Technology}{Vashi, Navi Mumbai}
-{Developer Intern}{July 2023 -- June 2024}
-\resumeItemListStart
-\resumeItem{Optimized college portal serving \textbf{200+ users}.}
-\resumeItem{Built information management system.}
-\resumeItemListEnd
+  \resumeSubHeadingListEnd
 
-\resumeSubHeadingListEnd
-
+%-----------PROJECTS-----------
 \section{Projects}
-\resumeSubHeadingListStart
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Delta Investments} $|$ \emph{MERN Stack, AI Integration}}{2024}
+          \resumeItemListStart
+            \resumeItem{Architected investment platform with \textbf{real-time stock data} and \textbf{Gemini AI} integration.}
+            \resumeItem{Implemented \textbf{auto trading feature} with AI-powered market analysis and risk management.}
+          \resumeItemListEnd
 
-\resumeProjectHeading
-{\textbf{Delta Investments} $|$ \emph{MERN Stack, AI Integration}}{2024}
-\resumeItemListStart
-\resumeItem{Built investment platform with AI-powered trading.}
-\resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{VaniConnect: Sign Language Transcriber} $|$ \emph{Python, Computer Vision}}{2024}
+          \resumeItemListStart
+            \resumeItem{Constructed real-time gesture translation system with \textbf{85\% accuracy} across \textbf{200+ sign patterns} for both \textbf{Indian and American sign languages}.}
+            \resumeItem{\textbf{Won 1st place} in Summer Project Competition among \textbf{60+ participants}.}
+          \resumeItemListEnd 
 
-\resumeProjectHeading
-{\textbf{VaniConnect: Sign Language Transcriber} $|$ \emph{Python, CV}}{2024}
-\resumeItemListStart
-\resumeItem{Real-time gesture translation with \textbf{85\% accuracy}.}
-\resumeItem{Won \textbf{1st place} in Summer Project Competition.}
-\resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Expense Ease} $|$ \emph{Java, JavaFX, MySQL}}{2023}
+          \resumeItemListStart
+            \resumeItem{Developed comprehensive expense tracking application with \textbf{CRUD operations} for transactions, savings, and budget management.}
+            \resumeItem{Integrated \textbf{data visualization} with pie and bar charts for category-wise spending analysis and budget alerts.}
+            \resumeItem{Built \textbf{borrow/lend tracking system} with automated due date reminders and user-friendly JavaFX interface.}
+          \resumeItemListEnd
 
-\resumeProjectHeading
-{\textbf{Expense Ease} $|$ \emph{Java, MySQL}}{2023}
-\resumeItemListStart
-\resumeItem{Expense tracking with data visualization.}
-\resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Open Source Contribution Tracker} $|$ \emph{React, Node.js, MongoDB}}{2024}
+          \resumeItemListStart
+              \resumeItem{Developed analytics platform to provide analysis and tracking for \textbf{20+ GitHub repositories}.}
+              \resumeItem{Enabled users to view details of their open-source contributions and generate shareable links to showcase them on platforms like LinkedIn.}
+        \resumeItemListEnd
 
-\resumeSubHeadingListEnd
+    \resumeSubHeadingListEnd
 
+%-----------ACHIEVEMENTS & LEADERSHIP-----------
 \section{Achievements \& Leadership}
-\resumeSubHeadingListStart
+    \resumeSubHeadingListStart
+      \resumeSubheading
+        {GirlScript Summer of Code (GSSOC'25)}{Open Source Program}
+        {Selected Contributor}{2025}
+        \resumeItemListStart
+          \resumeItem{Contributed to \textbf{AlgoVisualizer project} by adding \textbf{custom array input feature} for sorting and searching techniques.}
+          \resumeItem{Enhanced \textbf{frontend design} of documentation page, improving user experience and accessibility.}
+        \resumeItemListEnd
 
-\resumeSubheading
-{Horizon 1.0 Hackathon - GDSC OnCampus, Vidyavardhini's College of Engineering \& Technology}{Vasai, Maharashtra}
-{1st Place Winner}{March 2026}
-\resumeItemListStart
-\resumeItem{Secured \textbf{1st place} by building a functional solution under tight deadlines.}
-\resumeItem{Collaborated with \textbf{3 teammates} to design and implement the project.}
-\resumeItemListEnd
+      \resumeSubheading
+        {HackQuinox 2024 - CSI FCRIT}{Mumbai, India}
+        {Top 5 Finalist}{2024}
+        
+      \resumeSubheading
+        {Smart India Hackathon}{Government of India}
+        {Internal Round Qualifier}{2024}
 
-\resumeSubheading
-{GirlScript Summer of Code (GSSOC'25)}{Open Source Program}
-{Selected Contributor}{2025}
+      \resumeSubheading
+        {Computer Society of India - IT Department}{FCRIT}
+        {Treasurer}{2023}
+        \resumeItemListStart
+          \resumeItem{Handled finance for CSI-IT events, managing budgets up to \textbf{INR 30,000} with sponsorship incentives.}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
 
-\resumeSubheading
-{HackQuinox 2024 - CSI FCRIT}{Mumbai, India}
-{Top 5 Finalist}{2024}
-
-\resumeSubheading
-{Computer Society of India - IT Department}{FCRIT}
-{Treasurer}{2023}
-
-\resumeSubHeadingListEnd
-
+%-----------PROGRAMMING SKILLS-----------
 \section{Technical Skills}
-\begin{itemize}[leftmargin=0.1in, label={}]
-\small{\item{
-\textbf{Languages:} Python, Java, JavaScript, SQL \\
-\textbf{Frontend:} React, HTML/CSS \\
-\textbf{Backend:} Node.js, Express, MongoDB \\
-\textbf{ML/AI:} TensorFlow, Scikit-learn \\
-\textbf{Tools:} Docker, GitHub Actions
-}}
-\end{itemize}
+ \begin{itemize}[leftmargin=0.1in, label={}]
+    \small{\item{
+     \textbf{Languages:} Python, Java, JavaScript, SQL \\
+    \textbf{Frontend:} React, HTML/CSS, JavaScript \\
+    \textbf{Backend:} Node.js, Express, MongoDB\\
+    \textbf{ML/AI:} TensorFlow, Scikit-learn, Computer Vision \\
+    \textbf{Databases:} MongoDB, MySQL, ChromaDB (Vector Database) \\
+    \textbf{Tools:} Docker, GitHub Actions
+    }}
+ \end{itemize}
 
 \end{document}
