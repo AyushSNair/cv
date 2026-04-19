@@ -2,7 +2,7 @@
 % Author : Ayush Sukhadan Nair
 %------------------------
 
-\documentclass[letterpaper,10pt]{article}
+\documentclass[letterpaper,9.5pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -28,11 +28,11 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-\addtolength{\oddsidemargin}{-0.6in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1.19in}
-\addtolength{\topmargin}{-0.8in}
-\addtolength{\textheight}{1.7in}
+\addtolength{\oddsidemargin}{-0.65in}
+\addtolength{\evensidemargin}{-0.55in}
+\addtolength{\textwidth}{1.25in}
+\addtolength{\topmargin}{-0.85in}
+\addtolength{\textheight}{1.75in}
 
 \urlstyle{same}
 \raggedbottom
@@ -46,7 +46,7 @@
 \pdfgentounicode=1
 
 \newcommand{\resumeItem}[1]{
-  \item\small{{#1 \vspace{-3pt}}}
+  \item\small{{#1 \vspace{-2.5pt}}}
 }
 
 \newcommand{\resumeSubheading}[4]{
@@ -70,7 +70,7 @@
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in]}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
 
 %-------------------------------------------
 \begin{document}
@@ -91,7 +91,10 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {Fr. C. Rodrigues Institute of Technology}{Vashi, Navi Mumbai}
-      {Bachelor of Engineering in Information Technology $|$ \normalfont\small CGPA: 9.55/10.0}{2022 -- 2026}
+      {Bachelor of Engineering in Information Technology}{2022 -- 2026}
+      \resumeItemListStart
+        \resumeItem{CGPA: 9.55/10.0}
+      \resumeItemListEnd
   \resumeSubHeadingListEnd
 
 %-----------EXPERIENCE-----------
@@ -102,30 +105,34 @@
       {IISER Mohali x TIFR}{Colaba, Mumbai}
       {Project Intern}{June 2025 -- Present}
       \resumeItemListStart
-        \resumeItem{Built end-to-end \textbf{automated wirebond inspection pipeline} on \textbf{Linux (Ubuntu)} using heatmap correlation, ORB-RANSAC homography for registration, and CLAHE + Lanczos upscaling across 92 sites per board.}
-        \resumeItem{Integrated \textbf{custom RF-DETR model} via \textbf{REST API} for gold pad inspection with confidence scoring and automated PDF/CSV QC report generation using ReportLab.}
-        \resumeItem{Developed \textbf{HexaVision}, a multi-threaded \textbf{PyQt5 desktop app} with real-time tracking and stephole grid viewer; deployed on Linux. \textbf{Won 1st prize} at PCUBE poster presentation.}
+        \resumeItem{Built an end-to-end \textbf{automated wirebond inspection pipeline} deployed on \textbf{Linux (Ubuntu)}, using heatmap correlation for orientation correction, ORB-RANSAC homography for coordinate registration, and CLAHE + Lanczos upscaling for stephole extraction across 92 sites per board.}
+        \resumeItem{Integrated a \textbf{custom RF-DETR object detection model} via \textbf{REST API} for gold pad inspection, with network timeout handling, per-stephole confidence scoring, and automated PDF/CSV QC report generation.}
+        \resumeItem{Developed \textbf{HexaVision}, a \textbf{PyQt5 desktop application} with multi-threaded pipeline, real-time progress tracking, and stephole grid viewer; deployed on \textbf{Linux} using \texttt{venv}.}
+        \resumeItem{Awarded \textbf{1st prize} in poster presentation at PCUBE.}
       \resumeItemListEnd
 
     \resumeSubheading
       {Sports Mentoring Infusion - NGO}{Remote}
       {Backend + Analytics Developer}{June 2025 -- July 2025}
       \resumeItemListStart
-        \resumeItem{Built production-grade platform with \textbf{role-based auth} serving \textbf{50+ users} across 4 roles; reduced coordination time by \textbf{70\%} for 10+ coaches.}
+        \resumeItem{Developed production-grade application with \textbf{role-based authentication} serving \textbf{50+ users} across \textbf{4 roles} (admins, students, coaches, volunteers).}
+        \resumeItem{Implemented communication workflows reducing manual coordination time by \textbf{70\%} for \textbf{10+ coaches}.}
       \resumeItemListEnd
 
     \resumeSubheading
       {IISER Mohali}{Mohali, Punjab}
       {Project Intern}{July 2024 -- June 2025}
       \resumeItemListStart
-        \resumeItem{Engineered real-time \textbf{fall detection system} using \textbf{YOLOv8-OBB + MediaPipe}, reducing false positives by \textbf{60\%} with live monitoring and feedback for immediate healthcare response.}
+        \resumeItem{Engineered fall detection system using \textbf{YOLOv8-OBB + MediaPipe}, reducing false positives by \textbf{60\%}.}
+        \resumeItem{Created healthcare solution for \textbf{live monitoring and feedback} enabling immediate response.}
       \resumeItemListEnd
 
     \resumeSubheading
       {Fr. Conceicao Rodrigues Institute of Technology}{Vashi, Navi Mumbai}
       {Developer Intern}{July 2023 -- June 2024}
       \resumeItemListStart
-        \resumeItem{Optimized college portal serving \textbf{200+ users}; built \textbf{information management system} for structured data and records.}
+        \resumeItem{Optimized college portal serving \textbf{200+ users} with enhanced performance and functionality.}
+        \resumeItem{Built \textbf{information management system} for structured college data and records.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -135,21 +142,27 @@
     \resumeSubHeadingListStart
 
       \resumeProjectHeading
-          {\textbf{Delta Investments} $|$ \emph{MERN Stack, Gemini AI}}{2024}
+          {\textbf{Delta Investments} $|$ \emph{MERN Stack, AI Integration}}{2024}
           \resumeItemListStart
-            \resumeItem{Architected investment platform with \textbf{real-time stock data}, \textbf{Gemini AI} integration, and auto trading with AI-powered market analysis and risk management.}
+            \resumeItem{Architected investment platform with \textbf{real-time stock data} and \textbf{Gemini AI} integration for market analysis.}
+            \resumeItem{Implemented \textbf{auto trading feature} with AI-powered risk management and portfolio optimization.}
+            \resumeItem{Designed \textbf{RESTful backend} with Node.js and Express handling live data feeds and user authentication.}
           \resumeItemListEnd
 
       \resumeProjectHeading
           {\textbf{VaniConnect: Sign Language Transcriber} $|$ \emph{Python, Computer Vision}}{2024}
           \resumeItemListStart
-            \resumeItem{Real-time gesture translation with \textbf{85\% accuracy} across \textbf{200+ sign patterns} (ISL \& ASL). \textbf{Won 1st place} among 60+ participants.}
+            \resumeItem{Constructed real-time gesture translation system achieving \textbf{85\% accuracy} across \textbf{200+ sign patterns} for both \textbf{Indian and American sign languages}.}
+            \resumeItem{Built custom \textbf{MediaPipe} hand-landmark pipeline with frame-level classification and real-time overlay rendering.}
+            \resumeItem{\textbf{Won 1st place} in Summer Project Competition among \textbf{60+ participants}.}
           \resumeItemListEnd
 
       \resumeProjectHeading
           {\textbf{Open Source Contribution Tracker} $|$ \emph{React, Node.js, MongoDB}}{2024}
           \resumeItemListStart
-            \resumeItem{Analytics platform tracking contributions across \textbf{20+ GitHub repositories} with shareable LinkedIn-ready profile links.}
+            \resumeItem{Developed analytics platform tracking contributions across \textbf{20+ GitHub repositories} with shareable profile links.}
+            \resumeItem{Integrated \textbf{GitHub REST API} for real-time contribution data, commit history, and PR analytics.}
+            \resumeItem{Built \textbf{shareable link generation} to showcase open-source profiles on LinkedIn and other platforms.}
           \resumeItemListEnd
 
     \resumeSubHeadingListEnd
@@ -159,21 +172,29 @@
     \resumeSubHeadingListStart
 
       \resumeSubheading
-        {Horizon 1.0 Hackathon -- GDSC, Vidyavardhini's College of Engineering \& Technology}{Vasai, India}
-        {1st Place Winner}{March 2026}
-        \resumeItemListStart
-          \resumeItem{Built \textbf{real-time SME data aggregation platform} with live dashboard and alerts for multi-vertical business insights.}
-        \resumeItemListEnd
-
-      \resumeSubheading
         {GirlScript Summer of Code (GSSOC'25)}{Open Source Program}
         {Selected Contributor}{2025}
         \resumeItemListStart
-          \resumeItem{Added \textbf{custom array input} for AlgoVisualizer sorting/searching; improved documentation page accessibility.}
+          \resumeItem{Added \textbf{custom array input feature} for sorting/searching in AlgoVisualizer; improved documentation page accessibility.}
         \resumeItemListEnd
 
       \resumeSubheading
-        {HackQuinox 2024 - CSI FCRIT \textnormal{\textit{\small $|$ Top 5 Finalist}} \quad Computer Society of India - IT Dept. \textnormal{\textit{\small $|$ Treasurer, INR 30K budget}}}{}{}{}\vspace{-4pt}
+        {Horizon 1.0 Hackathon -- GDSC, Vidyavardhini's College of Engineering \& Technology}{Vasai, India}
+        {1st Place Winner}{March 2026}
+        \resumeItemListStart
+          \resumeItem{Built \textbf{SME data aggregation platform} with real-time insights, alerts, and live dashboard for informed decision-making.}
+        \resumeItemListEnd
+
+      \resumeSubheading
+        {HackQuinox 2024 - CSI FCRIT}{Mumbai, India}
+        {Top 5 Finalist}{2024}
+
+      \resumeSubheading
+        {Computer Society of India - IT Department}{FCRIT}
+        {Treasurer}{2023}
+        \resumeItemListStart
+          \resumeItem{Managed event finances up to \textbf{INR 30,000} with sponsorship coordination across CSI-IT events.}
+        \resumeItemListEnd
 
     \resumeSubHeadingListEnd
 
@@ -182,9 +203,11 @@
 \begin{itemize}[leftmargin=0.15in, label={}, itemsep=1pt]
   \small{
     \item \textbf{Languages:} \hspace{1.3em} C, Python, Java, JavaScript, SQL
-    \item \textbf{Frontend/Backend:} \hspace{0em} React, HTML/CSS, Node.js, Express, MongoDB, MySQL
-    \item \textbf{ML / AI:} \hspace{2.2em} Scikit-learn, Computer Vision (OpenCV, YOLOv8, MediaPipe), TensorFlow
-    \item \textbf{Tools \& OS:} \hspace{1.35em} Linux (Ubuntu), Docker, GitHub Actions, Git
+    \item \textbf{Frontend:} \hspace{1.95em} React, HTML/CSS, JavaScript
+    \item \textbf{Backend:} \hspace{2.0em} Node.js, Express, MongoDB
+    \item \textbf{ML / AI:} \hspace{2.2em} Scikit-learn, TensorFlow, Computer Vision (OpenCV, YOLOv8, MediaPipe)
+    \item \textbf{Databases:} \hspace{1.4em} MongoDB, MySQL, ChromaDB
+    \item \textbf{Tools:} \hspace{2.75em} Docker, GitHub Actions, Linux (Ubuntu), Git
   }
 \end{itemize}
 
